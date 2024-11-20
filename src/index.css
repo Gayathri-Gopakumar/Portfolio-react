@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Merriweather", serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Static Text */
+.dynamic-hi {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Typing animation for Name */
+.dynamic-name {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  opacity: 0; /* Initially hidden */
+  animation: typingName 3s steps(20, end) 1s forwards, blink 1s step-end infinite alternate 4s;
+}
+
+@keyframes typingName {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Typing animation for Heading */
+.dynamic-heading {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  opacity: 0; /* Initially hidden */
+  animation: typingHeading 4s steps(40, end) 5s forwards, blink 1s step-end infinite alternate 9s;
+}
+
+@keyframes typingHeading {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Typing animation for Paragraph */
+.dynamic-paragraph {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  opacity: 0; /* Initially hidden */
+  animation: typingParagraph 6s steps(60, end) 10s forwards, blink 1s step-end infinite alternate 16s;
+}
+
+@keyframes typingParagraph {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Cursor blinking effect */
+@keyframes blink {
+  from {
+    border-right: 2px solid transparent;
+  }
+  to {
+    border-right: 2px solid #fc6d6d;
+  }
+}
+
+/* Fade-in animation for initial text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
